@@ -31,11 +31,32 @@ const accountChangedHandler = async (newAccount) => {
     selectedAccount = await newAccount.getAddress();
 }
 
+const switchNetwork =  async () => {
+    window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [{
+            chainId: "0x5",
+            rpcUrls: ["https://goerli.infura.io/v3/"],
+            chainName: "Goerli",
+            nativeCurrency: {
+                name: "GoerliETH",
+                symbol: "GoerliETH",
+                decimals: 18
+            },
+            blockExplorerUrls: ["https://goerli.etherscan.io"]
+        }]
+    });
+    
+}
+
 const connectMetamask = async () => {
     provider = new ethers.providers.Web3Provider(window.ethereum)
     if (window.ethereum) {
         provider.send("eth_requestAccounts", []).then(async () => {
             await accountChangedHandler(provider.getSigner());
+            onConnect()
+
+
             window.ethereum.on('accountsChanged', (accounts) => {
                 selectedAccount = accounts[0]
             })
@@ -43,7 +64,7 @@ const connectMetamask = async () => {
                 window.location.reload();
             })
         })
-        onConnect()
+        
     } else {
         Swal.fire({
             icon: 'error',
@@ -118,14 +139,18 @@ async function fetchAccountData() {
             icon: 'error',
             title: 'Oops...',
             text: `Contract is not deployed on the selected network please choose ${NETWORK_NAME} network`
+        }).then(()=>{
+            disconnect();
         })
-        disconnect();
         return;
+        // await switchNetwork()
     }
 
 }
 
-
+function kFormatter(num) {
+    return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(2)) + 'k' : Math.sign(num)*Math.abs(num)
+}
 
 /**
 * Connect wallet button pressed.
@@ -133,6 +158,7 @@ async function fetchAccountData() {
 async function onConnect() {
     document.querySelector('#connectDiv').style.display = "none"
     document.querySelector('#tokenPurchase').style.display = "flex"
+    await fetchAccountData()
 }
 
 
@@ -148,8 +174,8 @@ async function buyTokenContract(price) {
     try {
         let signer = provider.getSigner();
         let icoContract = new ethers.Contract(ICO_CONTRACT_ADDRESS, ICOABI, signer);
-        let estimateGas = await icoContract.estimateGas.buyTokens(selectedAccount, { from: selectedAccount, value: price });
-        let tx = await icoContract.buyTokens(selectedAccount, { from: selectedAccount, value: price,  gasLimit: estimateGas.toString() });
+        let estimateGas = await icoContract.estimateGas.buyTokens(selectedAccount, price.toString());
+        let tx = await icoContract.buyTokens(selectedAccount, price.toString(), { gasLimit: estimateGas.toString() });
         await tx.wait();
         Swal.fire({
             icon: 'success',
@@ -177,11 +203,46 @@ async function startLoading() {
 
 async function stopLoading() {
     document.querySelector("#btnBuy").removeAttribute('disabled');
-    document.querySelector('#btnBuy').innerHTML = 'Buy with Ethereum';
+    document.querySelector('#btnBuy').innerHTML = 'Buy';
+}
+
+const approve = async (price) => {
+    try {
+        let signer = provider.getSigner();
+        let usdt = new ethers.Contract(USDT_CONTRACT, TokenAbi, signer);
+        let estimateGas = await usdt.estimateGas.approve(ICO_CONTRACT_ADDRESS, price.toString());
+        let tx = await usdt.approve(ICO_CONTRACT_ADDRESS, price.toString(), { gasLimit: estimateGas.toString() });
+        await tx.wait();
+
+    } catch {
+        stopLoading();
+        const {error, code} = e
+        if(error.code === -32000) {
+            Swal.fire({
+                icon: 'error',
+                text: 'Insufficient funds available for this transaction'
+            })
+        } else {
+            console.log(error)
+            console.log(code)
+        }
+    }
+} 
+
+const handleRatesOnChange = () => {
+    let amount = document.querySelector('#price').value;
+    const regExp = /^[0-9]\d*(\.\d+)?$/;
+    if (!amount.match(regExp)) {
+        document.querySelector('#price').value = ''
+        return;
+    }
+    const rates = parseFloat(amount) * 40
+    document.querySelector('#rates').value = kFormatter(rates);
+
 }
 
 async function buyTokens() {
-    let amount = document.querySelector('#amount').value;
+    let amount = document.querySelector('#price').value;
     if (amount === '') {
         Swal.fire({
             icon: 'error',
@@ -203,10 +264,12 @@ async function buyTokens() {
 
     if (selectedAccount !== null && selectedAccount !== undefined) {
         try {
-            let signer = provider.getSigner();
-            const price = ethers.utils.parseEther(amount);
+            const price = ethers.utils.parseUnits(amount, '6');
             startLoading();
+            await approve(price);
             await buyTokenContract(price)
+            document.querySelector('#price').value = 0
+            document.querySelector('#rates').value = 0
             stopLoading();
         } catch (e) {
             Swal.fire({

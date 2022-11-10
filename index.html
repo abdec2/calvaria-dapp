@@ -110,9 +110,9 @@
 												<div class="presale-module--nextPrice--SiWUU"><span>Hurry before the price increase to 1 USDT = 33.33 $RIA</span></div>
 											</div>
 											<div id="tokenPurchase" style="display: none;" class="presale-module--btnCont--snG6Y mt-3">
-												<input id="price" type="text" class="presale-input-field" placeholder="Enter amount in usdt" />
+												<input id="price" x-on:input.change="handleRatesOnChange()" type="text" class="presale-input-field" placeholder="Enter amount in USDT" />
 												<input id="rates" disabled type="text" class="presale-input-field mt-3" value="0" />
-												<button x-on:click="modal = true" class="main-button-module--btnDefault--EhH9D main-button-module--btnHov--ebJG8 main-button-module--langCommon--Tm0Zy mt-3">Buy</button>
+												<button id="btnBuy" x-on:click="buyTokens();" class="main-button-module--btnDefault--EhH9D main-button-module--btnHov--ebJG8 main-button-module--langCommon--Tm0Zy mt-3">Buy</button>
 												<div class="presale-module--helpersCont---gu1q"><a x-on:click="disconnect();" href="javascript:;" class="btnDis" href="#">Disconnect</a></div>
 											</div>
 											<div id="connectDiv" class="presale-module--btnCont--snG6Y"><span>Connect your wallet to buy tokens:</span>
