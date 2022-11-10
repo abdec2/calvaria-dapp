@@ -170,13 +170,14 @@ async function buyTokenContract(price) {
         let signer = provider.getSigner();
         let icoContract = new ethers.Contract(ICO_CONTRACT_ADDRESS, ICOABI, signer);
         let estimateGas = await icoContract.estimateGas.buyTokens(selectedAccount, price.toString());
+        console.log(estimateGas.toString())
         let tx = await icoContract.buyTokens(selectedAccount, price.toString(), { gasLimit: estimateGas.toString() });
         await tx.wait();
         Swal.fire({
             icon: 'success',
             text: `Purchase Done`
         })
-    } catch (e) {
+    } catch(e) {
         stopLoading();
         const {error, code} = e
         if(error.code === -32000) {
@@ -206,10 +207,11 @@ const approve = async (price) => {
         let signer = provider.getSigner();
         let usdt = new ethers.Contract(USDT_CONTRACT, TokenAbi, signer);
         let estimateGas = await usdt.estimateGas.approve(ICO_CONTRACT_ADDRESS, price.toString());
+        console.log(estimateGas.toString())
         let tx = await usdt.approve(ICO_CONTRACT_ADDRESS, price.toString(), { gasLimit: estimateGas.toString() });
         await tx.wait();
 
-    } catch {
+    } catch(e) {
         stopLoading();
         const {error, code} = e
         if(error.code === -32000) {
