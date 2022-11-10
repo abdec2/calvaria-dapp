@@ -25,23 +25,7 @@ const accountChangedHandler = async (newAccount) => {
     selectedAccount = await newAccount.getAddress();
 }
 
-const switchNetwork =  async () => {
-    window.ethereum.request({
-        method: "wallet_addEthereumChain",
-        params: [{
-            chainId: "0x5",
-            rpcUrls: ["https://goerli.infura.io/v3/"],
-            chainName: "Goerli",
-            nativeCurrency: {
-                name: "GoerliETH",
-                symbol: "GoerliETH",
-                decimals: 18
-            },
-            blockExplorerUrls: ["https://goerli.etherscan.io"]
-        }]
-    });
-    
-}
+
 
 const connectMetamask = async () => {
     provider = new ethers.providers.Web3Provider(window.ethereum)
