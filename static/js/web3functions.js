@@ -76,7 +76,7 @@ const connectMetamask = async () => {
 
 const walletConnect = async () => {
     const web3Provider = new WalletConnectProvider({
-        infuraId: "f0d6fc462b65430aab30849f72e1ce4c",
+        infuraId: "1e9edd21f07e462e96f6f7e6a9799b0e",
     });
 
     await web3Provider.enable()
@@ -84,6 +84,7 @@ const walletConnect = async () => {
     provider = new ethers.providers.Web3Provider(web3Provider);
 
     await accountChangedHandler(provider.getSigner())
+    onConnect()
 
     web3Provider.on("accountsChanged", (accounts) => {
         selectedAccount = accounts[0]
